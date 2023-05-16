@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="title">CARRITOS</h1>
+    {{#if cart.products.length}}
+    <span>ID Carrito: {{cart._id}}</span>
+    <div class='cart-container'>
+    {{#each cart.products}}
+        <div class='cart-item'>
+            <div class="cart-img-item-container">
+                <img src={{product.thumbnail}} alt={{product.title}}>
+            </div>
+            <div class="row-1">
+                <h3 class="cart-product-title">{{product.title}}</h3>
+                <span class="cart-product-id">ID: {{product._id}}</span>
+                <span class="cart-product-category">*{{product.category}}</span>
+            </div>
+            <div class="row-2">
+                <span class="cart-product-price">${{product.price}}</span>
+            </div>  
+            <div class="row-3">
+                <span class="cart-product-quantity">Cantidad: {{quantity}}</span>
+            </div>  
+        </div>
+    {{/each}}
+    </div>
+    {{else}}
+    <h2>No hay productos para mostrar.</h2>
+    {{/if}}
+    <p><strong>*Actualice para mostrar cambios</strong></p>
+</div>

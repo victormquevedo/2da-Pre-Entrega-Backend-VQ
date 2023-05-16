@@ -1,0 +1,14 @@
+<div class="signup-container">
+    <h1>REGISTRO DE USUARIO</h1>
+    
+    <form action='/api/users/signup' method='post' class="signup-form">
+        <input type='text' name='firstName' id='firstName' placeholder='Nombre' required> 
+        <input type='text' name='lastName' id='lastName' placeholder='Apellido' required> 
+        <input type='number' name='age' id='age' placeholder='Edad' required> 
+        <input type='email' name='email' id='email' placeholder='Email' required> 
+        <input type='password' name='password' id='password' placeholder='Contraseña' required> 
+        <input type='submit' value='Crear usuario'> 
+    </form>
+
+    <a href="/views/login">¿Ya tienes una cuenta? Inicia sesion</a>
+</div>
